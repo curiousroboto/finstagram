@@ -96,3 +96,9 @@ post '/likes' do
 
   redirect(back)
 end
+
+delete '/likes/:id' do
+  like = Like.find(params[:id])
+  like.destroy
+  redirect(back)
+end
